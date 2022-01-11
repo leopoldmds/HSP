@@ -51,18 +51,31 @@ __global__ void cudaMatrixMult(float *M1, float *M2, float *Mout, int n)
 }
 ```
 
-## 2. Partie 2 - Premières couches du réseau de neurone LeNet-5 : Convolution 2D et subsampling
+## 3. Partie 2 - Premières couches du réseau de neurone LeNet-5 : Convolution 2D et subsampling
 
 ### L'architecture du réseau LeNet-5 est composé de plusieurs couches :
-#### Layer 1 - Génération des données de test
+* #### Layer 1 - Génération des données de test
 ```
 MatrixInit0(raw_data,N,P,1); # avec N= P =32
 ```
-* ### Layer 2- Convolution avec 6 noyaux de convolution de taille 5x5. La taille résultantes est donc de 6x28x28.
+* #### Layer 2- Convolution avec 6 noyaux de convolution de taille 5x5. La taille résultantes est donc de 6x28x28.
 ```
 __global__ void cudaConv2D(double *img, double *kernels, double * out, int n, int p, int q, int k )
 ```
-* ### Layer 3- Sous-échantillonnage d'un facteur 2. La taille résultantes des données est donc de 6x14x14.
+* #### Layer 3- Sous-échantillonnage d'un facteur 2. La taille résultantes des données est donc de 6x14x14.
+#### Layer 3 - Sous-échantillonnage
 ```
 __global__ void cudaMeanPool(double *in, double *out, int n, int p, int q)
 ```
+#### Tests
+
+### Fonctions d'activation
+#### Tanh
+```
+__device__ double cudaActivationTanh(double val)
+```
+#### Softmax
+```
+void ActivationSoftmax(double* input, size_t size)
+```
+## 4. Partie 3 - Un peu de Python
