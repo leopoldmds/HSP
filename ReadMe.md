@@ -82,4 +82,4 @@ void ActivationSoftmax(double* input, size_t size)
 ### Importation du dataset MNIST et affichage des données en console
 <a href="https://upload.wikimedia.org/wikipedia/commons/2/27/MnistExamples.png"><img src="https://upload.wikimedia.org/wikipedia/commons/2/27/MnistExamples.png" alt="" /></a>
 
-#### Un script *printMNIST.cu* est donné, permettant l'ouverture de ce fichier et l'affichage d'une image. 
+ Un script *printMNIST.cu* est donné, permettant l'ouverture de ce fichier et l'affichage d'une image. 
