@@ -16,7 +16,7 @@
 
 #### Création d'une matrice sur CPU
 ##### Initialisation d'une matrice de taille n x p, avec des valeurs aléatoires entre -1 et 1
-'void MatrixInit(float *M, int n, int p){
+`void MatrixInit(float *M, int n, int p){
     for (int i=0; i<=n*p-1; i++){
         // M[i]=(float)rand()/RAND_MAX*2-1; // entre -1 et 1
         M[i]=(float)rand()/RAND_MAX; // entre 0 et 1
@@ -24,7 +24,7 @@
 }'
 
 ##### Initialisation d'une matrice de taille n x p, avec des valeurs égales à 0
-'void MatrixInit0(float *M, int n, int p){
+`void MatrixInit0(float *M, int n, int p){
     for (int i=0; i<=n*p-1; i++){
         M[i]=0;
     }
