@@ -108,3 +108,6 @@ __global__ void cudaMatrixMult(float *M1, float *M2, float *Mout, int n){
 
 ##### L'architecture du réseau LeNet-5 est composé de plusieurs couches :
 * ##### Layer 1- Couche d'entrée de taille 32x32 correspondant à la taille des images de la base de donnée MNIST
+* ##### Layer 2- Convolution avec 6 noyaux de convolution de taille 5x5. La taille résultantes est donc de 6x28x28.
+* ##### Layer 3- Sous-échantillonnage d'un facteur 2. La taille résultantes des données est donc de 6x14x14.
+
