@@ -103,3 +103,8 @@ __global__ void cudaMatrixMult(float *M1, float *M2, float *Mout, int n){
     Mout[lig * n + col] = s;
 }
 ```
+
+## 2. Partie 2 - Premières couches du réseau de neurone LeNet-5 : Convolution 2D et subsampling
+
+##### L'architecture du réseau LeNet-5 est composé de plusieurs couches :
+* ##### Layer 1- Couche d'entrée de taille 32x32 correspondant à la taille des images de la base de donnée MNIST
