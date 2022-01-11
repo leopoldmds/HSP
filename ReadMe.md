@@ -106,8 +106,14 @@ __global__ void cudaMatrixMult(float *M1, float *M2, float *Mout, int n){
 
 ## 2. Partie 2 - Premières couches du réseau de neurone LeNet-5 : Convolution 2D et subsampling
 
-##### L'architecture du réseau LeNet-5 est composé de plusieurs couches :
-* ##### Layer 1- Couche d'entrée de taille 32x32 correspondant à la taille des images de la base de donnée MNIST
-* ##### Layer 2- Convolution avec 6 noyaux de convolution de taille 5x5. La taille résultantes est donc de 6x28x28.
-* ##### Layer 3- Sous-échantillonnage d'un facteur 2. La taille résultantes des données est donc de 6x14x14.
+### L'architecture du réseau LeNet-5 est composé de plusieurs couches :
+* ### Layer 1- Couche d'entrée de taille 32x32 correspondant à la taille des images de la base de donnée MNIST
+```
+__global__ void cudaMeanPool(double *in, double *out, int n, int p, int q)
+```
+* ### Layer 2- Convolution avec 6 noyaux de convolution de taille 5x5. La taille résultantes est donc de 6x28x28.
+```
+__global__ void cudaConv2D(double *img, double *kernels, double * out, int n, int p, int q, int k )
+```
+* ### Layer 3- Sous-échantillonnage d'un facteur 2. La taille résultantes des données est donc de 6x14x14.
 
