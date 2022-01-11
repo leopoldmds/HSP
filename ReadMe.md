@@ -48,8 +48,7 @@ void MatrixPrint(float *M, int n, int p){
 }
 ```
 
-#### Addition de deux matrices sur CPU
-##### Addition de deux matrices M1 et M2 de même taille n x p
+#### Addition de deux matrices M1 et M2 de même taille n x p sur CPU
 ```
 void MatrixAdd(float *M1, float *M2, float *Mout, int n, int p){
     for(int i=0;i<n*p-1;i++){
@@ -58,7 +57,7 @@ void MatrixAdd(float *M1, float *M2, float *Mout, int n, int p){
 }
 ```
 
-#### Addition de deux matrices sur GPU
+#### Addition de deux matrices M1 et M2 de taille n x p sur GPU
 ```
 __global__ void cudaMatrixAdd(float *M1, float *M2, float *Mout, int n, int p){
     
@@ -70,7 +69,7 @@ __global__ void cudaMatrixAdd(float *M1, float *M2, float *Mout, int n, int p){
 }
 ```
 
-#### Multiplication de deux matrices NxN sur CPU
+#### Multiplication de deux matrices M1 et M2 de taille NxN sur CPU
 ```
 void MatrixMult(float *M1, float *M2, float *Mout, int n){    
     for (int lig = 0; lig < n; lig++){
@@ -86,7 +85,7 @@ void MatrixMult(float *M1, float *M2, float *Mout, int n){
 
 ```
 
-#### Multiplication de deux matrices NxN sur GPU
+#### Multiplication de deux matrices M1 et M2 de taille NxN sur GPU
 ```
 __global__ void cudaMatrixMult(float *M1, float *M2, float *Mout, int n){
     printf("Multiplication depuis le GPU en cours...\n\n");
