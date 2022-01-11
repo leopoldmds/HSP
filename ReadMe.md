@@ -73,7 +73,7 @@ __global__ void cudaMeanPool(double *in, double *out, int n, int p, int q)
 __device__ double cudaActivationTanh(double val)
 ```
 
-## 4. Partie 3 - Un peu de Python
+## Partie 3 - Un peu de Python
 ### Fonction d'activation manquante - Softmax
 ```
 void ActivationSoftmax(double* input, size_t size)
