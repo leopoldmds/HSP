@@ -74,6 +74,9 @@ __device__ double cudaActivationTanh(double val)
 ```
 
 ## Partie 3 - Un peu de Python
+
+Un notebook *LeNet5bis.ipynb* est mis à disposition et à étudier.
+
 ### Fonction d'activation manquante - Softmax
 ```
 void ActivationSoftmax(double* input, size_t size)
