@@ -63,19 +63,18 @@ MatrixInit0(raw_data,N,P,1); # avec N= P =32
 __global__ void cudaConv2D(double *img, double *kernels, double * out, int n, int p, int q, int k )
 ```
 * #### Layer 3- Sous-échantillonnage d'un facteur 2. La taille résultantes des données est donc de 6x14x14.
-#### Layer 3 - Sous-échantillonnage
 ```
 __global__ void cudaMeanPool(double *in, double *out, int n, int p, int q)
 ```
-#### Tests
+### Tests
 
-### Fonctions d'activation
-#### Tanh
+### Fonctions d'activation - Tanh
 ```
 __device__ double cudaActivationTanh(double val)
 ```
-#### Softmax
+
+## 4. Partie 3 - Un peu de Python
+### Fonction d'activation manquante - Softmax
 ```
 void ActivationSoftmax(double* input, size_t size)
 ```
-## 4. Partie 3 - Un peu de Python
