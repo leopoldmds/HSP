@@ -1,8 +1,8 @@
 # TP : Implémentation d'un CNN  - LeNet-5 sur GPU
 
-## 1. Objectifs & méthodes de travail 
+## Objectifs & méthodes de travail 
 
-### 1.1 Implémentation d'un CNN
+### Implémentation d'un CNN
 
 #### LeNet-5
 
@@ -10,7 +10,7 @@
 
 <a href="https://zupimages.net/viewer.php?id=22/02/cqff.png"><img src="https://zupimages.net/up/22/02/cqff.png" alt="" /></a>
 
-## 2. Partie 1 - Prise en main de Cuda : Multiplication de matrices
+## Partie 1 - Prise en main de Cuda : Multiplication de matrices
 
 ### Multiplication de matrices
 
@@ -51,7 +51,7 @@ __global__ void cudaMatrixMult(float *M1, float *M2, float *Mout, int n)
 }
 ```
 
-## 3. Partie 2 - Premières couches du réseau de neurone LeNet-5 : Convolution 2D et subsampling
+## Partie 2 - Premières couches du réseau de neurone LeNet-5 : Convolution 2D et subsampling
 
 ### L'architecture du réseau LeNet-5 est composé de plusieurs couches :
 * #### Layer 1 - Génération des données de test
@@ -78,3 +78,8 @@ __device__ double cudaActivationTanh(double val)
 ```
 void ActivationSoftmax(double* input, size_t size)
 ```
+
+### Importation du dataset MNIST et affichage des données en console
+<a href="https://upload.wikimedia.org/wikipedia/commons/2/27/MnistExamples.png"><img src="https://upload.wikimedia.org/wikipedia/commons/2/27/MnistExamples.png" alt="" /></a>
+
+#### Un script *printMNIST.cu* est donné, permettant l'ouverture de ce fichier et l'affichage d'une image. 
